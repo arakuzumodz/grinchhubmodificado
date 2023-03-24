@@ -1309,8 +1309,8 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
+local window = library:CreateWindow("Grinch Ware | MODIFICADO", Enum.KeyCode.RightControl)
+local Watermark = library:CreateWatermark("Grinch Ware | MODIFICADO | {fps}")
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')
@@ -1396,7 +1396,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
