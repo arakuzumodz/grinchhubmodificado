@@ -464,6 +464,10 @@ Misc:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
 
+Misc:AddToggle("Enable Walk Speed", false, function(t)
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(t)
+end)
+
 Misc:AddButton("Mist Move - Can Kick",function()
     game:GetService("ReplicatedStorage").Remotes.immense_reflexes_asd123:FireServer()
 end)
