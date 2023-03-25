@@ -360,7 +360,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
