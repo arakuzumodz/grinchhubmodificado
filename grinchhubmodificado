@@ -464,10 +464,6 @@ Misc:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
 end)
 
-Misc:AddToggle("God Mode - Kamado", false, function(t)
-    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(t)
-end)
-
 Misc:AddButton("Mist Move - Can Kick",function()
     game:GetService("ReplicatedStorage").Remotes.immense_reflexes_asd123:FireServer()
 end)
@@ -1384,6 +1380,10 @@ Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
+Farming:AddToggle("God Mode - Kamado", false, function(value)
+    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(value)
+end)
+
 --Settings
 
 getgenv().Method = "Sword"
@@ -1502,10 +1502,6 @@ end)
 
 Misc:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
-end)
-
-Misc:AddToggle("God Mode - Kamado", false, function(t)
-    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(t)
 end)
 
 Misc:AddButton("Mist Move - Can Kick",function()
@@ -2442,10 +2438,6 @@ end)
 
 Misc:AddButton("God Mode - Kamado Only",function()
     game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(true)
-end)
-
-Misc:AddToggle("God Mode - Kamado", false, function(t)
-    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(t)
 end)
 
 Misc:AddButton("Mist Move - Can Kick",function()
