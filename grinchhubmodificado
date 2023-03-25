@@ -1,5 +1,7 @@
 --normalmente o script é carregado da seguinte forma:
 --loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/src/main/ff"))()
+--MINHA VERSÃO COM DISTANCE AUMENTADO (nao toma dano no farm):
+--loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinchhubmodificado"))()
 --caso o github caia, é só reupar esse arquivo aqui (grinch hub ARQUIVO PRINCIPAL) e carregá-lo como no formato acima
 
 repeat task.wait() until game:IsLoaded()
@@ -1396,7 +1398,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
@@ -2362,7 +2364,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 20
-Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
