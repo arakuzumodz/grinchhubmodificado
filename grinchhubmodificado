@@ -316,7 +316,7 @@ Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:AddToggle("Farm Selected Boss", false, function(value)
+Farming:AddToggle("Farm Selected Boss 1", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
@@ -1352,7 +1352,7 @@ Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:AddToggle("Farm Selected Boss", false, function(value)
+Farming:AddToggle("Farm Selected Boss 2", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
