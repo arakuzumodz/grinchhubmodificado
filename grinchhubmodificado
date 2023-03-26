@@ -1,7 +1,5 @@
 --normalmente o script é carregado da seguinte forma:
 --loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/src/main/ff"))()
---MINHA VERSÃO COM DISTANCE AUMENTADO (nao toma dano no farm):
---loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinchhubmodificado"))()
 --caso o github caia, é só reupar esse arquivo aqui (grinch hub ARQUIVO PRINCIPAL) e carregá-lo como no formato acima
 
 repeat task.wait() until game:IsLoaded()
@@ -274,7 +272,7 @@ setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinch_require"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
 local window = library:CreateWindow("Grinch Ware | MODIFICADO", Enum.KeyCode.RightControl)
 local Watermark = library:CreateWatermark("Grinch Ware | MODIFICADO | {fps}")
 
@@ -316,7 +314,7 @@ Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:AddToggle("Farm Selected Boss 1", false, function(value)
+Farming:AddToggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
@@ -362,7 +360,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
@@ -1054,6 +1052,8 @@ task.spawn(function()
     end
 end)
 
+--mapa 2
+
 --Map 2
 
 elseif game.PlaceId == 11468159863 then
@@ -1311,9 +1311,9 @@ setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinch_require"))()
-local window = library:CreateWindow("Grinch Ware | MODIFICADO", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("Grinch Ware | MODIFICADO | {fps}")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')
@@ -1353,7 +1353,7 @@ Farming:AddDropdown("Dropdown", BossessTable, '', false, function(value)
     getgenv().SelectedBoss = value
 end)
 
-Farming:AddToggle("Farm Selected Boss - MAP 2", false, function(value)
+Farming:AddToggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
@@ -1385,22 +1385,6 @@ Farming:AddToggle("Auto Eat Souls - Demons", false, function(value)
     getgenv().CollectSOuls = value
 end)
 
-Farming:AddToggle("God Mode - Kamado", false, function(value)
-    game:GetService("ReplicatedStorage").Remotes.heal_tang123asd:FireServer(value)
-end)
-
-Farming:AddToggle("Thunder Mode - Human Only", false, function(value)
-    game:GetService("ReplicatedStorage").Remotes.thundertang123:FireServer(value)
-end)
-
-Farming:AddToggle("Ren Mode - Ren/Human Only", false, function(value)
-    game:GetService("ReplicatedStorage").Remotes.heart_ablaze_mode_remote:FireServer(value)
-end)
-
-Misc:AddButton("Mist Move - Can Kick",function()
-    game:GetService("ReplicatedStorage").Remotes.immense_reflexes_asd123:FireServer()
-end)
-
 --Settings
 
 getgenv().Method = "Sword"
@@ -1419,7 +1403,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
@@ -1708,8 +1692,8 @@ spawn(function()
 end)
 
 
-
---AutoFarm All Bosses Ore
+------------------------------
+--AutoFarm All Bosses
 spawn(function()
     while task.wait() do
         pcall(function()
@@ -1752,7 +1736,7 @@ spawn(function()
         end)
     end
 end)
-
+------------------------------------
 
 
 
@@ -2360,7 +2344,7 @@ setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinch_require"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
 local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
@@ -2433,8 +2417,8 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
     getgenv().tweenspeed = self
 end)
 
-getgenv().Distance = 20
-Settings:AddSlider("Farm Distance", 5, 7.5, 50, 1, function(self)
+getgenv().Distance = 5
+Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
@@ -3008,7 +2992,7 @@ setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
 _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/arakuzumodz/grinchhubmodificado/main/grinch_require"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
 local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
