@@ -1,7 +1,3 @@
---normalmente o script é carregado da seguinte forma:
---loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Blackout4781/src/main/ff"))()
---caso o github caia, é só reupar esse arquivo aqui (grinch hub ARQUIVO PRINCIPAL) e carregá-lo como no formato acima
-
 repeat task.wait() until game:IsLoaded()
 if not LPH_OBFUSCATED then
     LPH_JIT_MAX = function(...) return(...) end;
@@ -273,8 +269,8 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | MODIFICADO", Enum.KeyCode.RightControl)
-local Watermark = library:CreateWatermark("Grinch Ware | MODIFICADO | {fps}")
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
 local Farming = Main:CreateSector("Farming", 'left')
@@ -360,7 +356,7 @@ Settings:AddSlider("Tween Speed", 100, 100, 300, 1, function(self)
 end)
 
 getgenv().Distance = 5
-Settings:AddSlider("Farm Distance", 5, 7.5, 20, 1, function(self)
+Settings:AddSlider("Farm Distance", 5, 7.5, 10, 1, function(self)
     getgenv().Distance = self
 end)
 --Auto Skills
@@ -1052,8 +1048,6 @@ task.spawn(function()
     end
 end)
 
---mapa 2
-
 --Map 2
 
 elseif game.PlaceId == 11468159863 then
@@ -1235,8 +1229,7 @@ end)();
 
 
 --Bosses
-local BossessTable = {"Slasher", "Nomay Bandit Boss", "Rengoku", "Inosuke","Renpeke","Muichiro Tokito","Enme","Swampy","Akeza"}
-local BossessTableOre = {"Rengoku","Akeza"}
+local BossessTable = {"Rengoku","Akeza"}
 local bosCFTable = {
     ["Nomay Bandit Boss"] = CFrame.new(3519, 673, -1898),
     Slasher = CFrame.new(950, 487, -1353),
@@ -1357,12 +1350,8 @@ Farming:AddToggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
-Farming:AddToggle("Farm All Bosses", false, function(value)
-    getgenv().AllBosses = value
-end)
-
 Farming:AddToggle("Farm Ore", false, function(value)
-    getgenv().AllBossesOre = value
+    getgenv().AllBosses = value
 end)
 
 Farming:AddToggle("Auto Collect Chest", false, function(value)
@@ -1690,55 +1679,6 @@ spawn(function()
         end)
     end
 end)
-
-
-------------------------------
---AutoFarm All Bosses
-spawn(function()
-    while task.wait() do
-        pcall(function()
-            if getgenv().AllBossesOre then
-                if not LP.Character.HumanoidRootPart:FindFirstChild("BodyVelocity") then
-                    antifall3 = Instance.new("BodyVelocity", LP.Character.HumanoidRootPart)
-                    antifall3.Velocity = Vector3.new(0, 0, 0)
-                    antifall3.MaxForce = Vector3.new(9e9, 9e9, 9e9)
-                elseif LP.Character.HumanoidRootPart:FindFirstChild("BodyVelocity") then
-                    for i,v in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
-                        if table.find(BossessTableOre, v.Name) and v:IsA("Model") and v:FindFirstChild("Humanoid") then
-                            if v.Humanoid.Health > 0 then
-                                repeat task.wait()                                      
-                                    if GetDistance(v:GetModelCFrame() * FarmModes) < 25 and GetDistance(v:GetModelCFrame() * FarmModes) < 150 then
-                                        if TweenFa then
-                                        TweenFa:Cancel()
-                                        wait(.1)
-                                        end
-                                        LP.Character.HumanoidRootPart.CFrame = v:GetModelCFrame() * FarmModes
-                                    else
-                                        TweenFa = Tween(v:GetModelCFrame() * FarmModes)
-                                    end
-                                    if v.Humanoid.Health > 0 and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and GetDistance(v:GetModelCFrame() * FarmModes) < 10 then
-                                        NearestMobs = true
-                                    elseif v.Humanoid.Health <= 0 or not v:FindFirstChild("Humanoid") and GetDistance(v:GetModelCFrame() * FarmModes) > 10 then
-                                        NearestMobs = false
-                                    end
-                                until not getgenv().AllBossesOre or not v.Parent or v.Humanoid.Health <= 0 or not v:IsDescendantOf(workspace)
-                                NearestMobs = false
-                            end
-                        end
-                    end
-                end
-            else
-                antifall3:Destroy()
-            end
-            if getgenv().AllBossesOre == false then
-                TweenFa:Cancel()
-            end
-        end)
-    end
-end)
-------------------------------------
-
-
 
 --Farm Selected Boss
 
