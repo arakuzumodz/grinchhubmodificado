@@ -1229,7 +1229,7 @@ end)();
 
 
 --Bosses
-local BossessTable = {"Rengoku","Akeza"}
+local BossessTable = {"Slasher", "Nomay Bandit Boss", "Rengoku", "Inosuke","Renpeke","Muichiro Tokito","Enme","Swampy","Akeza"}
 local bosCFTable = {
     ["Nomay Bandit Boss"] = CFrame.new(3519, 673, -1898),
     Slasher = CFrame.new(950, 487, -1353),
@@ -1350,7 +1350,7 @@ Farming:AddToggle("Farm Selected Boss", false, function(value)
     getgenv().FarmBoss = value 
 end)
 
-Farming:AddToggle("Farm Ore", false, function(value)
+Farming:AddToggle("Farm All Bosses", false, function(value)
     getgenv().AllBosses = value
 end)
 
