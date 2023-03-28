@@ -2079,7 +2079,7 @@ task.spawn(function()
 end)
 
  -- Dungeons
-elseif game.PlaceId == 11468075017 then
+elseif game.PlaceId == 11468034852 then
 
 local UIS = game:GetService("UserInputService")
 local VirtualUser = game:GetService("VirtualUser")
