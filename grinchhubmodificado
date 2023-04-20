@@ -269,7 +269,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightShift)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
@@ -1305,7 +1305,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightShift)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
@@ -2285,7 +2285,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightShift)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
@@ -2933,7 +2933,7 @@ _G.Color = Color3.fromRGB(255, 255, 255)
 _G.Color2 = Color3.fromRGB(1, 1, 1)
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/thing/main/sss"))()
-local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightControl)
+local window = library:CreateWindow("Grinch Ware | Project Slayers", Enum.KeyCode.RightShift)
 local Watermark = library:CreateWatermark("Grinch Ware | Project Slayers | {fps}")
 
 local Main = window:CreateTab("Main")
